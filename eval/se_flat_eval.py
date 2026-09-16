@@ -7,7 +7,7 @@ sys.path.insert(0, "/home/yibo/vcode/data/rl_projects/codex_isolated_spectral_na
 from pathlib import Path
 from experiments import train_v1_1_controller_gate as gate
 import train_track_a_clean_ppo as T
-import train_v1_mismatch_bdqn as legacy
+from experiments import train_v1_mismatch_bdqn as legacy
 from flat_joint_dqn import FlatJointDQN, decode_joint_index_numpy
 
 ATT, CAP, FLOOR, PMIN = 0.6, 4.4, -10.0, -100.0
