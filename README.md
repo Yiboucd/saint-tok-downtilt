@@ -77,14 +77,25 @@ used in the paper are in `figures/`.
 
 ## Heavy assets (not in this repository)
 
-Training end-to-end requires the factorized radio-map cache and the trained
-models. These are distributed via the UC Davis Box folder
-**`SAINT-Tok_RL_0-20deg`** (link to be added by the author), together with
-a SHA-256 manifest of every file:
+### Radio-map cache on Box
 
-- the 0–20° radio-map cache (189 single-sector maps, 61 MB),
-- the trained checkpoints (27 `final.pt`),
-- the demand estimator checkpoint.
+[Open the 0–20° radio-map archive on UC Davis Box](https://ucdavis.app.box.com/file/2495554626645).
+Access follows the file's existing Box permissions; sign-in and access approval
+may be required. This is a Box file-page link, not an anonymous public-download
+link.
+
+- **Archive:** `RFRL_DT_SAC_9e6453c7_downtilt_000-020_9sector_256x256.zip`
+- **Scene:** `SAC_9e6453c7`.
+- **Contents:** 189 single-sector radio maps: 9 sectors × 21 downtilt angles
+  (0° through 20°, inclusive, at 1° intervals), plus metadata and manifests.
+  Each map is a `float32` NumPy array with shape `256 × 256`.
+- **Download size:** 40,045,727 bytes (approximately 40.05 MB).
+- **Archive SHA-256:** `7046bd2a4623105d27e40bc4de33403b4581cd0cda8863eb80e3dcd2fcec7261`.
+
+This archive contains the radio-map cache only. The trained controller
+checkpoints and the demand-estimator checkpoint are separate assets and are
+**not included** in this download. The frozen result tables above can still be
+regenerated from this repository without those assets.
 
 ## Method / baselines in the comparison
 
