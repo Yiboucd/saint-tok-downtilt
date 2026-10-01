@@ -1,0 +1,3 @@
+# Frozen-record tables and training-curve plotting only.
+numpy
+matplotlib
